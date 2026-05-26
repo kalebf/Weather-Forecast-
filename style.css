@@ -1,0 +1,220 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Animated Gradient Background */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #2e1065, #3b0764);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  padding: 20px;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphic Container */
+.weather-card {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 30px;
+  color: #ffffff;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+}
+
+/* Search Input Component */
+.search-box {
+  display: flex;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 6px 12px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.search-box:focus-within {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.search-box input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0 8px;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.search-box button:hover {
+  opacity: 1;
+}
+
+/* Main Current Weather Display */
+.current-weather {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.location {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
+
+.weather-icon-main {
+  font-size: 4.5rem;
+  margin: 15px 0;
+  filter: drop-shadow(0 10px 15px rgba(255,255,255,0.2));
+  display: inline-block;
+}
+
+.temperature {
+  font-size: 5rem;
+  font-weight: 200;
+  line-height: 1;
+  margin-left: 15px;
+}
+
+.temperature span {
+  font-size: 2.5rem;
+  vertical-align: super;
+  font-weight: 300;
+}
+
+.description {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 8px;
+  text-transform: capitalize;
+}
+
+/* Weather Details Grid */
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-item {
+  text-align: center;
+}
+
+.detail-item span {
+  display: block;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Weekly Forecast Section */
+.forecast-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+}
+
+.forecast-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.forecast-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: transform 0.2s;
+}
+
+.forecast-day:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.day-name {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.day-icon {
+  font-size: 1.3rem;
+  flex: 1;
+  text-align: center;
+}
+
+.day-temp {
+  flex: 1;
+  text-align: right;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.day-temp .min-temp {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+  margin-left: 8px;
+}
