@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="weather-card">
+    <!-- City Input Field -->
+    <div class="search-box">
+      <input type="text" placeholder="Search city..." value="Kansas City">
+      <button aria-label="Search">🔍</button>
+  </div>
+
+    <!-- Current Weather -->
+    <div class="current-weather">
+      <h1 class="location">Kansas City</h1>
+      <p class="date">Thursday, May 19</p>
+      <div class="weather-icon-main">⛅</div>
+      <div class="temperature">68<span>°</span></div>
+      <p class="description">Partly Cloudy</p>
+    </div>
+
+    <!-- Weather Stats Details -->
+    <div class="weather-details">
+      <div class="detail-item">
+        <span class="detail-label">Wind</span>
+        <span class="detail-value">12 mph</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Humidity</span>
+        <span class="detail-value">64%</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Precip</span>
+        <span class="detail-value">10%</span>
+      </div>
+    </div>
+
+  <!-- Weekly Forecast -->
+  <h2 class="forecast-title">Weekly Forecast</h2>
+  <div class="forecast-list">
+    <div class="forecast-day">
+      <span class="day-name">Friday</span>
+      <span class="day-icon">☀️</span>
+      <span class="day-temp">72°<span class="min-temp">54°</span></span>
+    </div>
+      <div class="forecast-day">
+        <span class="day-name">Saturday</span>
+        <span class="day-icon">☁️</span>
+        <span class="day-temp">65°<span class="min-temp">52°</span></span>
+      </div>
+      <div class="forecast-day">
+        <span class="day-name">Sunday</span>
+        <span class="day-icon">🌧️</span>
+        <span class="day-temp">58°<span class="min-temp">48°</span></span>
+      </div>
+      <div class="forecast-day">
+        <span class="day-name">Monday</span>
+        <span class="day-icon">⛅</span>
+        <span class="day-temp">63°<span class="min-temp">50°</span></span>
+      </div>
+      <div class="forecast-day">
+        <span class="day-name">Tuesday</span>
+        <span class="day-icon">☀️</span>
+        <span class="day-temp">69°<span class="min-temp">53°</span></span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
